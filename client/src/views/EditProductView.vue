@@ -7,7 +7,7 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-2 justify-content-center"
         >
           <div class="col-sm-12">
-            <h4 class="mb-3">Editer un produit:</h4>
+            <h4 class="mb-3">Éditer produit:</h4>
             <div v-show="message" class="alert alert-success">
               {{ message }}
             </div>

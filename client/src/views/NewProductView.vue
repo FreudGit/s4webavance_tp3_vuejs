@@ -80,7 +80,7 @@
                       placeholder=""
                       required
                     >
-                      <option value="">Selectionner</option>
+                      <option value="" selected>Sélectionner une valeur</option>
                       <option value="Burger">Burger</option>
                       <option value="Italian">Italian</option>
                       <option value="Indian">Indian</option>
@@ -143,7 +143,7 @@ export default {
         photo: null,
         prix: null,
         description: null,
-        categorie: null,
+        categorie: "",
       },
     };
   },
