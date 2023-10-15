@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : sam. 14 oct. 2023 à 23:28
+-- Généré le : dim. 15 oct. 2023 à 22:33
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -43,26 +43,26 @@ CREATE TABLE `produits` (
 --
 
 INSERT INTO `produits` (`id`, `nom`, `description`, `prix`, `photo`, `categorie`, `createdAt`, `updatedAt`) VALUES
-(1, 'Aloo Chat', 'Delicious Indian street food made with potatoes and spices.', 5.99, 'aloochat.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(2, 'Aloo Tikki', 'Fried potato patties served with chutney.', 4.49, 'alootiki.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(3, 'Bhel Puri', 'A savory Indian snack made with puffed rice, vegetables, and chutney.', 6.99, 'bhel.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(4, 'Burger', 'Classic burger with a juicy patty and fresh toppings.', 8.99, 'burger.jpg', 'Fast Food', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(5, 'Chole Bhature', 'Fried bread served with spicy chickpea curry.', 7.49, 'cholebhture.jpg', 'Main Course', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(6, 'Dabeli', 'Indian sandwich with a spicy filling.', 5.99, 'dabeli.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(7, 'Dahi Puri', 'Small, round, crispy puris filled with yogurt and spices.', 4.99, 'dahipuri.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(8, 'Dahi Vada', 'Lentil dumplings soaked in yogurt and garnished with spices.', 6.49, 'dahivada.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(9, 'Fries', 'Crispy and golden French fries.', 3.99, 'fries.jpg', 'Side Dish', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(10, 'Ghughra', 'Fried dumplings filled with a sweet and savory mixture.', 5.49, 'ghughra.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(11, 'Gobi Manchurian', 'Crispy cauliflower florets tossed in a spicy sauce.', 7.99, 'gobhimanchurian.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(12, 'Kachori', 'Deep-fried bread stuffed with spiced lentils.', 4.99, 'kachori.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(13, 'Maggi', 'Instant noodles cooked with vegetables and spices.', 3.49, 'maggi.jpg', 'Fast Food', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(14, 'Mango Lassi', 'Refreshing yogurt-based drink with mango.', 4.99, 'mangolassi.jpg', 'Beverage', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(15, 'Pani Puri', 'Hollow, crispy shells filled with spicy tamarind water and potatoes.', 6.99, 'panipuri.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(16, 'Paua', 'Traditional New Zealand dish made with abalone.', 12.99, 'paua.jpg', 'Seafood', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(17, 'Pizza', 'Classic pizza with tomato sauce, cheese, and your choice of toppings.', 9.99, 'pizza.jpg', 'Fast Food', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(18, 'Samosa', 'Crispy pastry filled with spiced potatoes and peas.', 3.99, 'samosa.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(19, 'Samosa Chat', 'Samosa broken into pieces and topped with chutney and spices.', 5.49, 'samosachat.jpg', 'Appetizer', '2023-10-14 21:03:57', '2023-10-14 21:03:57'),
-(20, 'Sandwich', 'Simple and delicious sandwich with your choice of fillings.', 5.99, 'sandwich.jpg', 'Snack', '2023-10-14 21:03:57', '2023-10-14 21:03:57');
+(26, 'Aloo Chat222fhfhfttt', 'Délicieuse street food indienne à base de pommes de terre et d\'épices!!!', 8.99, 'aloochat.jpg', 'Italian', '2023-10-15 19:08:07', '2023-10-15 20:21:55'),
+(30, 'Chole Bhature', 'Pain frit servi avec un curry épicé aux pois chiches.', 7.49, 'cholebhture.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(31, 'Dabeli', 'Sandwich indien épicé avec une garniture relevée.', 5.99, 'dabeli.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(32, 'Dahi Puri', 'Petites boules croustillantes remplies de yaourt et d\'épices.', 4.99, 'dahipuri.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(33, 'Dahi Vada', 'Beignets de lentilles trempés dans du yaourt et garnis d\'épices.', 6.49, 'dahivada.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(34, 'Fries', 'Frites croustillantes et dorées.', 3.99, 'fries.jpg', 'Fast Food', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(35, 'Ghughra', 'Beignets frits remplis d\'un mélange sucré et salé.', 5.49, 'ghughra.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(36, 'Gobi Manchurian', 'Fleurs de chou-fleur croustillantes dans une sauce épicée.', 7.99, 'gobhimanchurian.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(37, 'Kachori', 'Pain frit farci aux lentilles épicées.', 4.99, 'kachori.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(38, 'Maggi', 'Nouilles instantanées cuisinées avec des légumes et des épices.', 3.49, 'maggi.jpg', 'Fast Food', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(39, 'Mango Lassi', 'Boisson rafraîchissante à base de yaourt et de mangue.', 4.99, 'mangolassi.jpg', 'Boisson', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(40, 'Pani Puri', 'Coques croustillantes remplies d\'eau de tamarin épicée et de pommes de terre.', 6.99, 'panipuri.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(41, 'Paua', 'Plat traditionnel néo-zélandais à base d\'abalone.', 12.99, 'paua.jpg', 'Fruits de Mer', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(42, 'Pizza', 'Pizza classique avec sauce tomate, fromage et le choix de vos garnitures.', 9.99, 'pizza.jpg', 'Fast Food', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(43, 'Samosa', 'Pâtisserie croustillante farcie de pommes de terre et de petits pois épicés.', 3.99, 'samosa.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(44, 'Samosa Chat', 'Samosa émietté et garni de chutney et d\'épices.', 5.49, 'samosachat.jpg', 'Indian', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(45, 'Sandwich', 'Sandwich simple et délicieux avec le choix de votre garniture.', 5.99, 'sandwich.jpg', 'Fast Food', '2023-10-15 19:08:07', '2023-10-15 19:08:07'),
+(47, 'wew2', 'qe', 45.00, 'pizza.jpg', 'Italian', '2023-10-15 20:09:13', '2023-10-15 20:10:19'),
+(48, 'bobo', 'hello world', 20.00, 'pizza.jpg', 'Burger', '2023-10-15 20:14:28', '2023-10-15 20:14:28'),
+(49, 'bobo', 'hello!', 33.00, 'pizza.jpg', 'Indian', '2023-10-15 20:20:35', '2023-10-15 20:20:35');
 
 --
 -- Index pour les tables déchargées
@@ -82,7 +82,7 @@ ALTER TABLE `produits`
 -- AUTO_INCREMENT pour la table `produits`
 --
 ALTER TABLE `produits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

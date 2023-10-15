@@ -86,5 +86,5 @@ Déposez votre projet (documentation au format PDF avec lien GitHub et instructi
 - [x] Enregistrez une courte vidéo de votre écran (max 3 min) avec le projet en cours
 d'exécution sur votre environnement local. Présentez toutes les pages et fonctions au fur et à mesure que le côté serveur change. 
 
-- [ ] Envoyez la vidéo avec le projet
+- [x] Envoyez la vidéo avec le projet
 L'absence de ces informations dans la documentation sera considérée comme un projet non conclu avec une note finale diminuée de 5 points sur 25
