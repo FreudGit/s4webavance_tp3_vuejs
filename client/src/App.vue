@@ -62,11 +62,11 @@ export default {
       this.inventory.splice(index, 1);
     },
     updateInventory(index, data) {
-      this.inventory[index].nom = data.name;
+      this.inventory[index].nom = data.nom;
       this.inventory[index].photo = data.photo;
-      this.inventory[index].prix = data.price;
+      this.inventory[index].prix = data.prix;
       this.inventory[index].description = data.description;
-      this.inventory[index].categorie = data.type;
+      this.inventory[index].categorie = data.categorie;
     },
     deleteProduct(name, id, index) {
       ProductDataService.delete(id).then((response) => {

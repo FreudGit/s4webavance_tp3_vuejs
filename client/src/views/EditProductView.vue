@@ -7,7 +7,7 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-2 justify-content-center"
         >
           <div class="col-sm-12">
-            <h4 class="mb-3">Ajouter un nouveau produit:</h4>
+            <h4 class="mb-3">Editer un produit:</h4>
             <div v-show="message" class="alert alert-success">
               {{ message }}
             </div>
@@ -15,11 +15,11 @@
               <div class="row g-2">
                 <div v-if="!submitted">
                   <div class="col-12">
-                    <label for="productName" class="form-label">Nom</label>
+                    <label for="productNom" class="form-label">Nom</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="productName"
+                      id="productNom"
                       v-model="product.nom"
                       placeholder=""
                       required
@@ -43,7 +43,7 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <label for="productPrice" class="form-label">Price</label>
+                    <label for="productPrice" class="form-label">Prix</label>
                     <div class="input-group has-validation">
                       <span class="input-group-text">CAD</span>
                       <input
