@@ -23,14 +23,6 @@ exports.create = (req, res) => {
     return;
   }
 
-  // const product = {
-  //     name: req.body.name,
-  //     photo: req.body.photo,
-  //     price: req.body.price,
-  //     description: req.body.description,
-  //     type: req.body.type,
-  // }
-
   Product.create(req.body)
 
     .then((data) => {
@@ -41,7 +33,7 @@ exports.create = (req, res) => {
       console.log("err", err.message);
 
       res.status(500).send({
-        message: err.message || "cannot insert into the db.(fh)",
+        message: err.message || "Impossible d'insérer dans la base de donnée",
       });
     });
 };
@@ -54,7 +46,7 @@ exports.findByPk = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Could not find the data(err.805)",
+        message: "Impossible de trouver la donnée(err.805)",
       });
     });
 };
@@ -67,17 +59,17 @@ exports.delete = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "deleted successfully",
+          message: "Effacé avec succès",
         });
       } else {
         res.send({
-          message: "cannot delete",
+          message: "Erreur (Delete)",
         });
       }
     })
     .catch((err) => {
       res.status(500).send({
-        message: "could not delete",
+        message: "Erreur (Delete) (e232)",
       });
     });
 };
@@ -90,17 +82,17 @@ exports.update = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "Product updated successfully",
+          message: "Product mis à jour avec succès",
         });
       } else {
         res.send({
-          message: "Cannot update product",
+          message: "Erreur (update product)",
         });
       }
     })
     .catch((err) => {
       res.status(500).send({
-        message: "could not delete",
+        message: "Erreur (update product) (e232)",
       });
     });
 };

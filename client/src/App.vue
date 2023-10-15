@@ -1,9 +1,7 @@
 <template>
   <nav className="navbar navbar-expand navbar-light bg-light">
     <div className="container">
-      <router-link class="nav-brand" to="/"
-        >Web Avancé - TP3 (Vue.JS)</router-link
-      >
+      <div class="nav-brand">Web Avancé - TP3 (Vue.JS)</div>
 
       <ul className="navbar-nav flex-row">
         <li class="nav-item">
@@ -14,7 +12,7 @@
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/new-product"
-            >New Product</router-link
+            >Ajouter produit</router-link
           >
         </li>
       </ul>

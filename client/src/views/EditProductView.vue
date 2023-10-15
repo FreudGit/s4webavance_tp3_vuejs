@@ -7,7 +7,7 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-2 justify-content-center"
         >
           <div class="col-sm-12">
-            <h4 class="mb-3">Add new product</h4>
+            <h4 class="mb-3">Ajouter un nouveau produit:</h4>
             <div v-show="message" class="alert alert-success">
               {{ message }}
             </div>
@@ -15,9 +15,7 @@
               <div class="row g-2">
                 <div v-if="!submitted">
                   <div class="col-12">
-                    <label for="productName" class="form-label"
-                      >Product Name</label
-                    >
+                    <label for="productName" class="form-label">Nom</label>
                     <input
                       type="text"
                       class="form-control"
@@ -26,12 +24,12 @@
                       placeholder=""
                       required
                     />
-                    <div class="invalid-feedback">Valid name is required.</div>
+                    <div class="invalid-feedback">
+                      Un nom valide est requis.
+                    </div>
                   </div>
                   <div class="col-12">
-                    <label for="productPhoto" class="form-label"
-                      >Product Photo</label
-                    >
+                    <label for="productPhoto" class="form-label">Photo</label>
                     <input
                       type="text"
                       class="form-control"
@@ -41,7 +39,7 @@
                       required
                     />
                     <div class="invalid-feedback">
-                      Valid photo path is required.
+                      Un chemin de photo valide est requis.
                     </div>
                   </div>
                   <div class="col-12">
@@ -56,12 +54,12 @@
                         placeholder=""
                         required
                       />
-                      <div class="invalid-feedback">Price is required.</div>
+                      <div class="invalid-feedback">Un Prix est requis.</div>
                     </div>
                   </div>
                   <div class="col-12">
                     <label for="productDescription" class="form-label"
-                      >Product Description</label
+                      >Description</label
                     >
                     <textarea
                       class="form-control"
@@ -69,11 +67,11 @@
                       v-model="product.description"
                       placeholder=""
                     ></textarea>
-                    <div class="invalid-feedback">Valid description</div>
+                    <div class="invalid-feedback">Description valide</div>
                   </div>
                   <div class="col-12">
                     <label for="productType" class="form-label"
-                      >Product Type</label
+                      >Categorie</label
                     >
                     <select
                       class="form-control"
@@ -82,14 +80,14 @@
                       placeholder=""
                       required
                     >
-                      <option value="">Select</option>
+                      <option value="">Sélectionner</option>
                       <option value="Burger">Burger</option>
                       <option value="Italian">Italian</option>
                       <option value="Indian">Indian</option>
                       <option value="Thai">Thai</option>
                     </select>
                     <div class="invalid-feedback">
-                      Valid photo path is required.
+                      Un chemin valide pour la photo est requis.
                     </div>
                   </div>
                   <button
@@ -97,14 +95,14 @@
                     type="button"
                     @click="updateProduct"
                   >
-                    Update
+                    Mettre-à-jour
                   </button>
                   <button
                     class="w-100 btn btn-danger btn-lg mt-3"
                     type="button"
                     @click="deleteProduct"
                   >
-                    Delete
+                    Effacer
                   </button>
                 </div>
                 <div v-else>
@@ -112,7 +110,7 @@
                     class="alert alert-success alert-dismissible fade show"
                     role="alert"
                   >
-                    <strong> You submitted successfully!</strong>
+                    <strong>Soumis avec succès!</strong>
                     <button
                       type="button"
                       class="btn-close"
@@ -125,7 +123,7 @@
                     type="button"
                     @click="newProduct"
                   >
-                    New product
+                    Ajouter un nouveau produit
                   </button>
                 </div>
                 <hr class="my-4" />

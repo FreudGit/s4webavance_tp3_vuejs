@@ -20,11 +20,12 @@
                 <!-- Product price-->
                 ${{ product.prix }}
               </div>
-              <p class="lead">{{ product.description }}</p>
+              <p class="text-xs text-muted mt-4">{{ product.description }}</p>
               <div class="d-flex">
                 <router-link
+                  class="text-dark"
                   :to="{ name: 'product', params: { id: product.id } }"
-                  >See more...</router-link
+                  >Voir plus...</router-link
                 >
               </div>
             </div>
@@ -43,7 +44,7 @@
                   type="button"
                   @click="deleteItem(product.nom, product.id, i)"
                 >
-                  Delete
+                  Effacer
                 </button>
               </div>
             </div>

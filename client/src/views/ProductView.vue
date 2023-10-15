@@ -13,114 +13,53 @@
             </div>
             <div class="needs-validation" novalidate>
               <div class="row g-2">
-                <div v-if="!submitted">
-                  <div class="col-12">
-                    <label for="productName" class="form-label">Nom</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="productName"
-                      v-model="product.nom"
-                      placeholder=""
-                      required
-                    />
-                    <div class="invalid-feedback">Valid name is required.</div>
+                <div class="col-12">
+                  <label for="productName" class="form-label">Nom</label>
+                  <div class="form-control border-0" readonly>
+                    {{ product.nom }}
                   </div>
-                  <div class="col-12">
-                    <label for="productPhoto" class="form-label"
-                      >Product Photo</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="productPhoto"
-                      v-model="product.photo"
-                      placeholder=""
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Un chemin valide est requis.
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="productPrice" class="form-label">Prix</label>
-                    <div class="input-group has-validation">
-                      <span class="input-group-text">CAD</span>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="productPrice"
-                        v-model.number="product.prix"
-                        placeholder=""
-                        required
-                      />
-                      <div class="invalid-feedback">Price is required.</div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="productDescription" class="form-label"
-                      >Description</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="productDescription"
-                      v-model="product.description"
-                      placeholder=""
-                    ></textarea>
-                    <div class="invalid-feedback">Valid description</div>
-                  </div>
-                  <div class="col-12">
-                    <label for="productType" class="form-label"
-                      >Catégorie</label
-                    >
-                    <select
-                      class="form-control"
-                      id="productType"
-                      v-model="product.categorie"
-                      placeholder=""
-                      required
-                    >
-                      <option value="">Select</option>
-                      <option value="Burger">Burger</option>
-                      <option value="Italian">Italian</option>
-                      <option value="Indian">Indian</option>
-                      <option value="Thai">Thai</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Valid photo path is required.
-                    </div>
-                  </div>
-                  <button
-                    class="w-100 btn btn-secondary btn-lg mt-3"
-                    type="button"
-                    @click="$router.push(`/products`)"
-                  >
-                    Retour à Produits
-                  </button>
                 </div>
-                <div v-else>
-                  <div
-                    class="alert alert-success alert-dismissible fade show"
-                    role="alert"
+                <div class="col-12">
+                  <label for="productPhoto" class="form-label"
+                    >Product Photo</label
                   >
-                    <strong> You submitted successfully!</strong>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="alert"
-                      aria-label="Close"
-                    ></button>
+                  <div class="form-control border-0" readonly>
+                    {{ product.photo }}
                   </div>
-                  <button
-                    class="w-100 btn btn-success btn-lg mt-3"
-                    type="button"
-                    @click="newProduct"
-                  >
-                    New product
-                  </button>
                 </div>
-                <hr class="my-4" />
+                <div class="col-12">
+                  <label for="productPrice" class="form-label">Prix</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">CAD</span>
+                    <div class="form-control border-0" readonly>
+                      {{ product.prix }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="productDescription" class="form-label"
+                    >Description</label
+                  >
+                  <div class="form-control border-0" readonly>
+                    {{ product.description }}
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="productType" class="form-label">Catégorie</label>
+                  <div class="form-control border-0" readonly>
+                    {{ product.categorie }}
+                  </div>
+                </div>
+                <button
+                  class="w-100 btn btn-secondary btn-lg mt-3"
+                  type="button"
+                  @click="$router.push(`/products`)"
+                >
+                  Retour à Produits
+                </button>
               </div>
+
+              <hr class="my-4" />
             </div>
           </div>
         </div>
