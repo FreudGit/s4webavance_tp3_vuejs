@@ -12,36 +12,33 @@
             <img
               class="card-img-top"
               :src="require(`@/assets/img/450/${product.photo}`)"
-              :alt="product.name"
+              :alt="product.nom"
             />
             <!-- Product details-->
             <div class="card-body p-4">
-              <div class="text-center">
+              <div class="text-center text-sm">
                 <!-- Product name-->
-                <h5 class="fw-bolder">{{ product.name }}</h5>
+                <h5 class="fw-bolder">{{ product.nom }}</h5>
                 <!-- Product price-->
-                <!-- ${{ product.price.toFixed(2) }} -->
+                ${{ product.prix }}
               </div>
+              <p class="lead">{{ product.description }}</p>
+              <div class="d-flex"></div>
             </div>
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <input
-                  type="number"
-                  class="form-control mb-2"
-                  v-model="product.quantity"
-                />
-                <a
-                  class="btn btn-outline-dark mt-auto"
-                  @click="addTo(product.name, i)"
-                  >Add to cart</a
+                <button
+                  class="btn btn-outline-dark flex-shrink-0 btn-sm"
+                  type="button"
+                  @click="$router.push(`/edit-product/${product.id}`)"
                 >
-                <p>
-                  <router-link
-                    :to="{ name: 'product', params: { id: product.name } }"
-                    >See more...</router-link
-                  >
-                </p>
+                  Edit (ex addtocard)
+                </button>
+                <router-link
+                  :to="{ name: 'product', params: { id: product.id } }"
+                  >See more...</router-link
+                >
               </div>
             </div>
           </div>

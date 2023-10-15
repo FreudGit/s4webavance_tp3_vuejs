@@ -7,7 +7,7 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-2 justify-content-center"
         >
           <div class="col-sm-12">
-            <h4 class="mb-3">Informations sur le produit</h4>
+            <h4 class="mb-3">Add new product</h4>
             <div v-show="message" class="alert alert-success">
               {{ message }}
             </div>
@@ -15,7 +15,9 @@
               <div class="row g-2">
                 <div v-if="!submitted">
                   <div class="col-12">
-                    <label for="productName" class="form-label">Nom</label>
+                    <label for="productName" class="form-label"
+                      >Product Name</label
+                    >
                     <input
                       type="text"
                       class="form-control"
@@ -39,11 +41,11 @@
                       required
                     />
                     <div class="invalid-feedback">
-                      Un chemin valide est requis.
+                      Valid photo path is required.
                     </div>
                   </div>
                   <div class="col-12">
-                    <label for="productPrice" class="form-label">Prix</label>
+                    <label for="productPrice" class="form-label">Price</label>
                     <div class="input-group has-validation">
                       <span class="input-group-text">CAD</span>
                       <input
@@ -59,7 +61,7 @@
                   </div>
                   <div class="col-12">
                     <label for="productDescription" class="form-label"
-                      >Description</label
+                      >Product Description</label
                     >
                     <textarea
                       class="form-control"
@@ -71,7 +73,7 @@
                   </div>
                   <div class="col-12">
                     <label for="productType" class="form-label"
-                      >Catégorie</label
+                      >Product Type</label
                     >
                     <select
                       class="form-control"
@@ -93,9 +95,16 @@
                   <button
                     class="w-100 btn btn-secondary btn-lg mt-3"
                     type="button"
-                    @click="$router.push(`/products`)"
+                    @click="updateProduct"
                   >
-                    Retour à Produits
+                    Update
+                  </button>
+                  <button
+                    class="w-100 btn btn-danger btn-lg mt-3"
+                    type="button"
+                    @click="deleteProduct"
+                  >
+                    Delete
                   </button>
                 </div>
                 <div v-else>
@@ -141,6 +150,31 @@ export default {
       product: {},
       id: parseInt(this.$route.params.id),
     };
+  },
+  methods: {
+    updateProduct() {
+      ProductDataService.update(this.id, this.product).then((response) => {
+        console.log("update", this.product.id, response);
+        this.updateInv(this.productIndex, this.product);
+        this.message = response.data.message;
+      });
+    },
+    deleteProduct() {
+      ProductDataService.delete(this.id).then((response) => {
+        console.log("remove", this.product.id, response);
+        this.remove(this.product.name);
+        this.removeInv(this.productIndex);
+        this.$router.push({ name: "home" });
+      });
+    },
+  },
+  computed: {
+    productIndex() {
+      const index = this.inventory.findIndex((p) => {
+        return p.id === this.id;
+      });
+      return index;
+    },
   },
   mounted() {
     ProductDataService.get(this.id).then((response) => {
