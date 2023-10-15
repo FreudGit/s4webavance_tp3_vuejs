@@ -48,7 +48,8 @@ RÉFÉRENCES:
 
 - LIEN VERS LE PROJET(WEBDEV): Non publié (non requis)
 
-- LIEN VERS LE VIDEO: **[SCREENRECORD](https://github.com/fhmaisonneuve/s4WebAvance_TP2_ReactCli/raw/master/__requis/s4webavance_presentation.mp4)**
+- LIEN VERS LE VIDEO: **[SCREENRECORD](https://github.com/fhmaisonneuve/s4webavance_tp3_vuejs/raw/main/__requis/s4webavance_tp3_vuejs_Pr%C3%A9sentationDuProjet.mp4
+)**
  ---  
 
 ---
