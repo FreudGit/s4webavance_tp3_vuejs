@@ -25,6 +25,7 @@ CLIENT:
 vue create s4webwvance_tp3_vuejs
 npm i bootstrap jquery popper.js @popperjs/core --force
 npm install vue-router (si non installé a l'installation)
+npm i axios --force
 npm run serve
 
 SERVER

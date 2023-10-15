@@ -12,30 +12,36 @@
             <img
               class="card-img-top"
               :src="require(`@/assets/img/450/${product.photo}`)"
-              :alt="product.nom"
+              :alt="product.name"
             />
             <!-- Product details-->
             <div class="card-body p-4">
-              <div class="text-center text-sm">
+              <div class="text-center">
                 <!-- Product name-->
-                <h5 class="fw-bolder">{{ product.nom }}</h5>
+                <h5 class="fw-bolder">{{ product.name }}</h5>
                 <!-- Product price-->
-                ${{ product.prix }}
+                <!-- ${{ product.price.toFixed(2) }} -->
               </div>
-              <p class="lead">{{ product.description }}</p>
-              <div class="d-flex"></div>
             </div>
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <button
-                  class="btn btn-outline-dark flex-shrink-0"
-                  type="button"
-                  @click="addTo(product.name, productIndex)"
+                <input
+                  type="number"
+                  class="form-control mb-2"
+                  v-model="product.quantity"
+                />
+                <a
+                  class="btn btn-outline-dark mt-auto"
+                  @click="addTo(product.name, i)"
+                  >Add to cart</a
                 >
-                  <i class="bi-cart-fill me-1"></i>
-                  Edit (ex addtocard)
-                </button>
+                <p>
+                  <router-link
+                    :to="{ name: 'product', params: { id: product.name } }"
+                    >See more...</router-link
+                  >
+                </p>
               </div>
             </div>
           </div>

@@ -12,6 +12,11 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/produits">Produits</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/new-product"
+            >New Product</router-link
+          >
+        </li>
       </ul>
     </div>
   </nav>
@@ -26,12 +31,47 @@
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import ProductDataService from "@/services/ProductDataService";
 
-// export default {
-//   name: "App",
-//   components: {
-//     HelloWorld,
-//   },
-// };
+export default {
+  components: {
+    // Sidebar,
+  },
+  data() {
+    return {
+      // showSideBar: false,
+      inventory: [],
+      // cart: {},
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.showSideBar = !this.showSideBar;
+    },
+    addToCart(product, index) {
+      if (!this.cart[product]) this.cart[product] = 0;
+      this.cart[product] += this.inventory[index].quantity;
+      console.log(this.cart);
+    },
+    removeItem(name) {
+      delete this.cart[name];
+    },
+  },
+  computed: {
+    totalQuantity() {
+      return Object.values(this.cart).reduce((acc, curr) => {
+        return acc + curr;
+      }, 0);
+    },
+  },
+  mounted() {
+    ProductDataService.getAll()
+      .then((response) => {
+        this.inventory = response.data;
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  },
+};
 </script>
